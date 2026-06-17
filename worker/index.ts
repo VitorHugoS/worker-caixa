@@ -39,4 +39,4 @@ export default {
       headers: { 'content-type': 'application/json' },
     })
   },
-}
+} satisfies ExportedHandler<Env>

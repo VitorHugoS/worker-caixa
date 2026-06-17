@@ -3,6 +3,13 @@
   "name": "worker-caixa",
   "main": "worker/index.ts",
   "compatibility_date": "2025-10-08",
+  "ratelimits": [
+    {
+      "name": "RATE_LIMITER",
+      "namespace_id": "1001",
+      "simple": { "limit": 3, "period": 60 }
+    }
+  ],
   "observability": {
     "enabled": false,
     "head_sampling_rate": 1,
@@ -18,11 +25,4 @@
       "head_sampling_rate": 1
     }
   },
-  "rate_limits": [
-    {
-      "binding": "RATE_LIMITER",
-      "namespace_id": "simulacao",
-      "simple": { "limit": 3, "period": 60 }
-    }
-  ]
 }
