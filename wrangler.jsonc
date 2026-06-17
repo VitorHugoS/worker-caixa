@@ -2,5 +2,12 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "worker-caixa",
   "main": "worker/index.ts",
-  "compatibility_date": "2025-10-08"
+  "compatibility_date": "2025-10-08",
+  "rate_limits": [
+    {
+      "binding": "RATE_LIMITER",
+      "namespace_id": "simulacao",
+      "simple": { "limit": 3, "period": 60 }
+    }
+  ]
 }
